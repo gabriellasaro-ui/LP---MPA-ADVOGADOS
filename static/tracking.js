@@ -1,66 +1,6 @@
-<<<<<<< HEAD
-/* Tracking base — MPA Advogados. Eventos: page_view (auto) e click_cta (via trackCTA). */
+/* Tracking base — MPA Advogados. Eventos: page_view (auto) e click_cta (via trackCTA).
+   Cada LP declara o próprio trackCTA e empurra page_view/click_cta/lead_submit no dataLayer,
+   então aqui só garantimos que o dataLayer exista antes do GTM. */
 (function(){
   try{ window.dataLayer = window.dataLayer || []; }catch(e){}
-=======
-(function () {
-  const eventStoreKey = "avanco_lp_events";
-
-  function getUtmParams() {
-    const params = new URLSearchParams(window.location.search);
-    const keys = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
-    return keys.reduce((acc, key) => {
-      const value = params.get(key) || sessionStorage.getItem(key) || "";
-      if (value) {
-        sessionStorage.setItem(key, value);
-        acc[key] = value;
-      }
-      return acc;
-    }, {});
-  }
-
-  function track(eventName, payload) {
-    const event = {
-      event: eventName,
-      payload: Object.assign(
-        {
-          page: window.location.pathname,
-          timestamp: new Date().toISOString()
-        },
-        getUtmParams(),
-        payload || {}
-      )
-    };
-
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push(event);
-
-    try {
-      const current = JSON.parse(localStorage.getItem(eventStoreKey) || "[]");
-      current.push(event);
-      localStorage.setItem(eventStoreKey, JSON.stringify(current.slice(-50)));
-    } catch (error) {
-      console.warn("Tracking local indisponivel", error);
-    }
-
-    console.log("[tracking]", eventName, event.payload);
-    return event;
-  }
-
-  window.trackCTA = function (label) {
-    return track("click_cta", { label: label || "cta" });
-  };
-
-  window.trackLeadSubmit = function (payload) {
-    return track("lead_submit", payload || {});
-  };
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", function () {
-      track("page_view");
-    });
-  } else {
-    track("page_view");
-  }
->>>>>>> 28eb8a73d835c2e95a2196e7f3778d0eebdbe6fc
 })();

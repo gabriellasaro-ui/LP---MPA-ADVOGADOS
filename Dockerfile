@@ -9,6 +9,4 @@ COPY . .
 
 EXPOSE 5003
 
-<<<<<<< HEAD
 CMD ["gunicorn", "--bind", "0.0.0.0:5003", "app:app"]
-======= 
