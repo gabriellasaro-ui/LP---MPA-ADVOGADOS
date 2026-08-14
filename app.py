@@ -29,17 +29,11 @@ def lp(slug):
 
 @app.route("/lp/help")
 def list_slugs():
-<<<<<<< HEAD
-    slug_list = [f for f in os.listdir(TEMPLATES_DIR) if f.endswith(".html")]
-    return {str(i): f.replace(".html", "") for i, f in enumerate(slug_list)}
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5003, debug=False)
 =======
     templates_dir = os.path.join(BASE_DIR, "templates")
     slug_list = [f for f in os.listdir(templates_dir) if f.endswith(".html")]
     return {str(i): f.replace(".html", "") for i, f in enumerate(slug_list)}
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5009, debug=False)
+    app.run(host="0.0.0.0", port=5003, debug=False)
 >>>>>>> 28eb8a73d835c2e95a2196e7f3778d0eebdbe6fc
