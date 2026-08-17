@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO OBRIGATÓRIO -->
-    <title>Aposentadoria Rural: Veja se Você Tem Direito | MPA Advogados</title>
-    <meta name="description" content="Trabalhou na roça durante boa parte da sua vida? O período de atividade rural pode ser considerado na sua aposentadoria, mesmo sem carteira assinada. Análise do seu caso com a MPA Advogados, mais de 28 anos em Direito Previdenciário.">
-    <meta name="keywords" content="aposentadoria rural, aposentadoria rural INSS, trabalhador rural, agricultura familiar, aposentadoria por idade rural, segurado especial, advogado previdenciário Campinas">
+    <title>Auxílio-Acidente: Veja se Você Pode Ter Direito | MPA Advogados</title>
+    <meta name="description" content="Sofreu um acidente no trabalho e ficou com alguma limitação? Mesmo após voltar a trabalhar, pode existir direito ao Auxílio-Acidente do INSS. Analise seu caso com a MPA Advogados.">
+    <meta name="keywords" content="auxílio-acidente, acidente de trabalho, sequela acidente, benefício INSS, incapacidade parcial, advogado previdenciário Campinas">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#5E1210">
-    <link rel="canonical" href="/aposentadoria-rural">
+    <link rel="canonical" href="/acidente-de-trabalho">
     <link rel="icon" type="image/png" href="/static/img/logo-mpa.png">
 
     <!-- Open Graph OBRIGATÓRIO -->
-    <meta property="og:title" content="Aposentadoria Rural: Veja se Você Tem Direito | MPA Advogados">
-    <meta property="og:description" content="Mesmo sem carteira assinada, o tempo de trabalho no campo pode contar. Descubra, sem compromisso, se você já tem direito à Aposentadoria Rural.">
+    <meta property="og:title" content="Auxílio-Acidente: Veja se Você Pode Ter Direito | MPA Advogados">
+    <meta property="og:description" content="Mesmo após voltar a trabalhar, uma sequela definitiva que reduziu sua capacidade pode gerar direito a um benefício mensal do INSS.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:image" content="/static/img/logo-mpa.png">
@@ -86,9 +86,9 @@
             --radius:20px;
             --shadow:0 18px 50px rgba(20,12,10,.13);
             --maxw:1160px;
-            --hero-img:url('/static/img/rural%20pc.png');
-            --hero-img-mobile:url('/static/img/rural%20mobile.png');
-            --hero-mobile-bg:#46171D;   /* cor do rodapé do banner mobile (continuidade sem emenda) */
+            --hero-img:url('/static/img/acidente%20de%20trabaalho%20pc.png');
+            --hero-img-mobile:url('/static/img/Acidente%20de%20trabalho%20mobile.png');
+            --hero-mobile-bg:#4a1015;   /* cor do rodapé do banner mobile (continuidade sem emenda) */
             --logo:url(/static/img/logo-mpa.png);
             --logo-white:url(/static/img/logo-mpa-white.png);
         }
@@ -181,6 +181,7 @@
 
         /* ===== CARDS DOR ===== */
         .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+        .cards-2 { grid-template-columns:repeat(2,1fr); }
         .card {
             background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:42px 36px;
             transition:transform .25s ease,box-shadow .25s ease; box-shadow:0 4px 14px rgba(0,0,0,.04);
@@ -221,6 +222,7 @@
         .quem-check svg { width:18px; height:18px; fill:#fff; }
         .quem-texto { font-size:1rem; line-height:1.5; color:var(--ink-soft); text-align:center; }
         .quem-texto strong { color:var(--ink); font-weight:700; }
+        .quem-item-wide { grid-column:1 / -1; }
         /* fecho de seção (frase de reforço) */
         .sec-foot { max-width:760px; margin:44px auto 0; text-align:center; }
         .sec-foot p { color:var(--ink-soft); font-size:1.04rem; margin-bottom:10px; }
@@ -413,6 +415,7 @@
             /* badges do hero saem no mobile: o banner já é curto e o CTA ganha destaque */
             .badges { display:none; }
             .cards, .benefits, .quem-grid, .steps, .steps-3, .urg { grid-template-columns:1fr; }
+            .quem-item-wide { grid-column:auto; }
             .urg { gap:28px; margin-top:48px; }
             .stats-grid { grid-template-columns:1fr; }
             .stat { border-right:0; border-bottom:1px solid rgba(255,255,255,.09); }
@@ -487,17 +490,19 @@
         <div class="hero-body">
             <div class="container">
                 <div class="hero-inner">
-                    <h1>Trabalhou na roça durante <span class="hl">boa parte da sua vida?</span></h1>
-                    <p class="hero-sub">Descubra se você pode ter direito à <strong>Aposentadoria Rural do INSS</strong>.</p>
-                    <p class="hero-note">Mesmo sem ter trabalhado todos esses anos com carteira assinada, o período de atividade rural pode ser considerado na sua aposentadoria.</p>
+                    <h1>Sofreu um acidente no trabalho e ficou com <span class="hl">alguma limitação?</span></h1>
+                    <p class="hero-sub">Mesmo que você tenha voltado a trabalhar, pode existir direito a um <strong>benefício mensal do INSS</strong>.</p>
+                    <p class="hero-note">Se o acidente deixou uma sequela definitiva que reduziu sua capacidade para o trabalho, mesmo que pareça pequena, seu caso pode se enquadrar no Auxílio-Acidente. E se o acidente aconteceu há anos, isso não significa automaticamente que seja tarde para analisar.</p>
                     <div class="hero-cta">
-                        <a href="https://wa.me/5519995230707?text=Ol%C3%A1!%20Quero%20saber%20se%20tenho%20direito%20%C3%A0%20Aposentadoria%20Rural." target="_blank" rel="noopener" class="btn-cta btn-lg" onclick="trackCTA('hero-rural')">SABER SE JÁ TENHO DIREITO AO BENEFÍCIO</a>
+                        <a href="https://wa.me/5519995230707?text=Ol%C3%A1!%20Quero%20saber%20se%20posso%20ter%20direito%20ao%20Aux%C3%ADlio-Acidente." target="_blank" rel="noopener" class="btn-cta btn-lg" onclick="trackCTA('hero-acidente')">QUERO SABER SE POSSO TER DIREITO</a>
                     </div>
                     <div class="badges">
                         <span><span class="bi"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span> Análise do seu caso</span>
+                        <span><span class="bi"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span> Atendimento pelo WhatsApp</span>
                         <span><span class="bi"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span> Sem compromisso</span>
-                        <span><span class="bi"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span> Resposta rápida</span>
+                        <span><span class="bi"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span> Atendimento em todo o Brasil</span>
                     </div>
+                    <p class="hero-disc">Cada situação precisa ser analisada individualmente.</p>
                 </div>
             </div>
         </div>
@@ -508,29 +513,34 @@
         <div class="container">
             <div class="sec-head">
                 <div class="eyebrow">Atenção</div>
-                <h2>Evite erros ao pedir sua <span class="hl">Aposentadoria Rural</span></h2>
+                <h2>Voltou a trabalhar depois do acidente? <span class="hl">Isso não significa que você perdeu o direito.</span></h2>
+                <p>Muitos trabalhadores acreditam que só poderiam receber algum benefício se estivessem totalmente incapacitados. Mas não é necessariamente assim.</p>
             </div>
-            <div class="cards">
+            <div class="cards cards-2">
                 <article class="card">
                     <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
-                    <h3>Trabalhei sem carteira assinada. Esse período conta?</h3>
-                    <p>O trabalho rural pode ser reconhecido mesmo sem registro em carteira, desde que a atividade seja comprovada.</p>
+                    <h3>Ficou com dificuldade para movimentar alguma parte do corpo?</h3>
+                    <p>Mesmo uma redução de movimento pode ser relevante para a análise.</p>
                 </article>
                 <article class="card">
                     <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 15h6"/></svg></div>
-                    <h3>Não tenho documentos de todos os anos. E agora?</h3>
-                    <p>Existem diferentes documentos que podem ajudar a demonstrar sua história de trabalho no campo.</p>
+                    <h3>Perdeu força, mobilidade ou passou a fazer mais esforço para trabalhar?</h3>
+                    <p>Se a sequela afetou a forma como você exerce a sua atividade, o caso merece atenção.</p>
                 </article>
                 <article class="card">
                     <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l6-4 6 4v12"/><path d="M15 21V13h6v8"/><path d="M3 21h18"/></svg></div>
-                    <h3>Trabalhei na roça e também na cidade. Posso me aposentar?</h3>
-                    <p>É necessário analisar cada período para identificar qual regra previdenciária pode ser aplicada.</p>
+                    <h3>O INSS encerrou seu afastamento e você voltou ao trabalho?</h3>
+                    <p>Dependendo da sequela deixada pelo acidente, pode existir outro benefício a ser analisado depois do afastamento.</p>
+                </article>
+                <article class="card">
+                    <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+                    <h3>Seu acidente aconteceu há 5, 10 ou até 15 anos?</h3>
+                    <p>O tempo que passou não deve ser motivo para descartar o caso sem uma análise adequada.</p>
                 </article>
             </div>
             <div class="solve">
-                <h3>Seu histórico de trabalho precisa ser analisado antes do pedido.</h3>
-                <p>Um erro na comprovação dos períodos rurais pode dificultar ou atrasar a concessão do benefício.</p>
-                <a href="https://wa.me/5519995230707?text=Ol%C3%A1!%20Quero%20saber%20se%20tenho%20direito%20%C3%A0%20Aposentadoria%20Rural." target="_blank" rel="noopener" class="btn-cta" onclick="trackCTA('atencao-rural')">ANALISAR MEU CASO</a>
+                <h3>Uma sequela que parece pequena para outras pessoas pode fazer diferença todos os dias no seu trabalho.</h3>
+                <a href="https://wa.me/5519995230707?text=Ol%C3%A1!%20Quero%20analisar%20meu%20caso%20de%20Aux%C3%ADlio-Acidente." target="_blank" rel="noopener" class="btn-cta" onclick="trackCTA('atencao-acidente')">QUERO ANALISAR MEU CASO</a>
             </div>
         </div>
     </section>
@@ -540,29 +550,32 @@
         <div class="container">
             <div class="sec-head">
                 <div class="eyebrow">Por que a MPA</div>
-                <h2>Por que contar com um <span class="hl">advogado especialista</span> em aposentadoria rural?</h2>
+                <h2>Por que contar com uma equipe especializada em <span class="hl">Direito Previdenciário?</span></h2>
             </div>
             <div class="benefits">
                 <div class="benefit">
                     <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
-                    <div><h3>Análise do histórico rural</h3>
-                    <p>Avaliação dos períodos em que você trabalhou no campo e da sua situação previdenciária.</p></div>
+                    <div><h3>Avaliação individual da sequela</h3>
+                    <p>Não basta saber que houve um acidente. É necessário entender o que mudou na sua capacidade de trabalhar depois dele.</p></div>
                 </div>
                 <div class="benefit">
                     <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13l2 2 4-4"/></svg></div>
-                    <div><h3>Orientação sobre documentos</h3>
-                    <p>Identificação das provas que podem ajudar a comprovar sua atividade rural.</p></div>
+                    <div><h3>Análise do histórico com o INSS</h3>
+                    <p>Verificamos afastamentos, benefícios anteriores, documentos e informações importantes para entender o caminho possível.</p></div>
                 </div>
                 <div class="benefit">
                     <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
-                    <div><h3>Estratégia para o pedido</h3>
-                    <p>Análise do melhor caminho para solicitar sua aposentadoria junto ao INSS.</p></div>
+                    <div><h3>Atendimento humanizado e direto</h3>
+                    <p>Você pode explicar o que aconteceu, quais limitações permaneceram e como isso interfere no seu trabalho atualmente.</p></div>
                 </div>
                 <div class="benefit">
                     <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-                    <div><h3>Mais de 28 anos de experiência</h3>
-                    <p>Atuação especializada em Direito Previdenciário e reconhecimento nacional.</p></div>
+                    <div><h3>Experiência em benefícios previdenciários</h3>
+                    <p>A MPA atua há mais de 28 anos auxiliando pessoas na análise e busca de direitos junto ao INSS.</p></div>
                 </div>
+            </div>
+            <div class="sec-foot">
+                <a href="https://wa.me/5519995230707?text=Ol%C3%A1!%20Quero%20analisar%20meu%20caso%20de%20Aux%C3%ADlio-Acidente." target="_blank" rel="noopener" class="btn-cta btn-lg" onclick="trackCTA('mpa-acidente')">FALAR COM A MPA PELO WHATSAPP</a>
             </div>
         </div>
     </section>
@@ -571,31 +584,36 @@
     <section class="block">
         <div class="container">
             <div class="sec-head">
-                <div class="eyebrow">Requisitos</div>
-                <h2>Quem pode ter direito à <span class="hl">Aposentadoria Rural?</span></h2>
-                <p>Veja se sua história se aproxima dos principais requisitos:</p>
+                <div class="eyebrow">Quem pode ter direito</div>
+                <h2>Sofreu um acidente e ficou com <span class="hl">alguma sequela?</span></h2>
+                <p>Veja algumas situações que merecem análise:</p>
             </div>
             <div class="quem-grid">
                 <div class="quem-item">
                     <div class="quem-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
-                    <div class="quem-texto"><strong>Mulheres a partir de 55 anos</strong>, com pelo menos 15 anos de atividade rural.</div>
+                    <div class="quem-texto"><strong>Acidentes com máquinas</strong><br>Ferimentos, esmagamentos, amputações ou limitações provocadas durante a operação de máquinas e equipamentos.</div>
                 </div>
                 <div class="quem-item">
                     <div class="quem-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
-                    <div class="quem-texto"><strong>Homens a partir de 60 anos</strong>, com pelo menos 15 anos de atividade rural.</div>
+                    <div class="quem-texto"><strong>Cortes ou lesões nas mãos e dedos</strong><br>Perda de movimento, sensibilidade, força ou dificuldade para realizar tarefas que antes eram normais.</div>
                 </div>
                 <div class="quem-item">
                     <div class="quem-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
-                    <div class="quem-texto"><strong>Quem trabalhou com agricultura familiar</strong>, inclusive junto com pais, marido, esposa ou outros familiares.</div>
+                    <div class="quem-texto"><strong>Fraturas</strong><br>Mesmo depois da recuperação, podem permanecer dores, limitações de movimento ou necessidade de maior esforço.</div>
                 </div>
                 <div class="quem-item">
                     <div class="quem-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
-                    <div class="quem-texto"><strong>Quem viveu do trabalho no campo</strong>, como produtores rurais, parceiros, meeiros, arrendatários e outros trabalhadores enquadrados nas regras do benefício.</div>
+                    <div class="quem-texto"><strong>Lesões na coluna</strong><br>Dificuldade para carregar peso, permanecer na mesma posição, abaixar, levantar ou executar atividades repetitivas.</div>
+                </div>
+                <div class="quem-item quem-item-wide">
+                    <div class="quem-check"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+                    <div class="quem-texto"><strong>Limitação nos braços, pernas ou articulações</strong><br>Você ainda consegue movimentar, mas não possui mais a mesma amplitude, força ou capacidade que tinha antes do acidente.</div>
                 </div>
             </div>
             <div class="sec-foot">
-                <p>Os requisitos gerais da aposentadoria rural por idade incluem <strong>idade mínima de 55 anos para mulheres, 60 para homens e 180 meses de atividade rural</strong>, conforme as regras aplicáveis ao trabalhador rural.</p>
-                <a href="https://wa.me/5519995230707?text=Ol%C3%A1!%20Quero%20saber%20se%20tenho%20direito%20%C3%A0%20Aposentadoria%20Rural." target="_blank" rel="noopener" class="btn-cta btn-lg" onclick="trackCTA('requisitos-rural')">DESCOBRIR SE POSSO ME APOSENTAR</a>
+                <p>O ponto principal não é somente o tamanho da lesão. É entender se ficou uma <strong>sequela definitiva que reduziu sua capacidade para exercer o trabalho habitual.</strong></p>
+                <p>O Auxílio-Acidente é um benefício de caráter indenizatório e, em determinados casos, pode ser recebido mesmo enquanto a pessoa continua trabalhando e recebendo salário.</p>
+                <a href="https://wa.me/5519995230707?text=Ol%C3%A1!%20Quero%20verificar%20se%20meu%20caso%20se%20enquadra%20no%20Aux%C3%ADlio-Acidente." target="_blank" rel="noopener" class="btn-cta btn-lg" onclick="trackCTA('situacoes-acidente')">VERIFICAR SE MEU CASO SE ENQUADRA</a>
             </div>
         </div>
     </section>
@@ -604,9 +622,9 @@
     <section class="block bg-soft">
         <div class="container">
             <div class="sec-head" style="margin-bottom:0">
-                <div class="eyebrow">Reconhecimento na mídia</div>
-                <h2>MPA na Record: <span class="hl">experiência em Direito Previdenciário</span></h2>
-                <p>A MPA já foi destaque na Record por sua atuação em Direito Previdenciário e conta com mais de 28 anos de experiência ajudando brasileiros em questões relacionadas ao INSS.</p>
+                <div class="eyebrow">Autoridade e prova</div>
+                <h2>MPA na Record: <span class="hl">reconhecimento pela atuação em Direito Previdenciário</span></h2>
+                <p>Há mais de 28 anos, a MPA Advogados atua na orientação de brasileiros sobre aposentadorias, benefícios por incapacidade e outros direitos previdenciários. Nossa atuação já recebeu reconhecimento nacional e espaço na mídia.</p>
             </div>
             <div class="media-video">
                 <iframe src="https://www.youtube.com/embed/UBifrPJ9TM4" title="MPA Advogados na Record" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -623,7 +641,7 @@
                 </div>
                 <div class="stat">
                     <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg></div>
-                    <div class="n">Troféu Aurum</div><div class="l"><b>Excelência jurídica</b>e reconhecimento nacional</div>
+                    <div class="n">Troféu Aurum</div><div class="l"><b>Reconhecimento</b>pela excelência jurídica</div>
                 </div>
                 <div class="stat">
                     <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
@@ -631,7 +649,7 @@
                 </div>
             </div>
             <div class="stats-cta">
-                <a href="https://wa.me/5519995230707?text=Ol%C3%A1!%20Quero%20saber%20se%20tenho%20direito%20%C3%A0%20Aposentadoria%20Rural." target="_blank" rel="noopener" class="btn-cta btn-lg" onclick="trackCTA('autoridade-rural')">QUERO ANALISAR MEU CASO</a>
+                <a href="https://wa.me/5519995230707?text=Ol%C3%A1!%20Quero%20analisar%20meu%20caso%20de%20Aux%C3%ADlio-Acidente." target="_blank" rel="noopener" class="btn-cta btn-lg" onclick="trackCTA('autoridade-acidente')">QUERO FALAR COM A MPA</a>
             </div>
         </div>
     </section>
@@ -641,26 +659,26 @@
         <div class="container">
             <div class="sec-head">
                 <div class="eyebrow">Passo a passo</div>
-                <h2>Como funciona o seu <span class="hl">atendimento</span></h2>
+                <h2>Como funciona a <span class="hl">análise do seu caso</span></h2>
             </div>
             <div class="steps steps-3">
                 <div class="step">
                     <div class="num">01</div>
                     <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
-                    <h3>Faça sua análise</h3>
-                    <p>Fale com a nossa equipe e conte um pouco sobre sua história de trabalho na roça.</p>
+                    <h3>Conte o que aconteceu</h3>
+                    <p>Clique no botão e fale conosco pelo WhatsApp. Explique quando ocorreu o acidente, o trabalho que você realizava e quais limitações ficaram.</p>
                 </div>
                 <div class="step">
                     <div class="num">02</div>
                     <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13l2 2 4-4"/></svg></div>
-                    <h3>Análise do seu caso</h3>
-                    <p>Avaliamos seus períodos de atividade rural e os documentos disponíveis.</p>
+                    <h3>Analisamos sua situação</h3>
+                    <p>A equipe avalia seu histórico, a sequela, os afastamentos e os documentos disponíveis para identificar se existe um benefício previdenciário a ser buscado.</p>
                 </div>
                 <div class="step">
                     <div class="num">03</div>
                     <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg></div>
-                    <h3>Entrada no INSS</h3>
-                    <p>Caso exista o direito, orientamos e cuidamos do processo junto ao INSS.</p>
+                    <h3>Orientamos sobre o próximo passo</h3>
+                    <p>Caso o seu caso se enquadre, você recebe orientação sobre o caminho adequado para buscar seu direito junto ao INSS.</p>
                 </div>
             </div>
         </div>
@@ -672,71 +690,26 @@
             <div class="cta-card">
                 <div class="cta-card-head">
                     <span class="cc-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></span>
-                    <h2>Descubra se os anos que você trabalhou na roça podem <span class="hl">garantir sua aposentadoria.</span></h2>
+                    <h2>Seu acidente passou. <span class="hl">A sequela pode ter ficado.</span></h2>
                 </div>
                 <div class="cta-card-body">
-                    <p class="lead">Fale com a nossa equipe e <strong>receba uma análise inicial do seu caso</strong>.</p>
+                    <p class="lead">Se você sofreu um acidente enquanto trabalhava e percebe que nunca recuperou completamente a força, o movimento ou a capacidade que tinha antes, <strong>vale a pena analisar sua situação.</strong></p>
                     <ul class="cta-list">
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Análise do histórico rural</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Orientação sobre documentos</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Atendimento especializado</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Atendimento em todo o Brasil</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Você já voltou a trabalhar</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Sua limitação parece pequena</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Você recebeu alta do INSS</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> O acidente aconteceu há vários anos</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Você nunca pediu Auxílio-Acidente</li>
                     </ul>
-                    <a class="btn-wa" href="https://wa.me/5519995230707?text=Ol%C3%A1!%20Quero%20saber%20se%20tenho%20direito%20%C3%A0%20Aposentadoria%20Rural." target="_blank" rel="noopener" onclick="trackCTA('cta-final-whatsapp')">
+                    <p class="lead">Descubra se o seu caso pode gerar algum direito previdenciário.</p>
+                    <a class="btn-wa" href="https://wa.me/5519995230707?text=Ol%C3%A1!%20Quero%20analisar%20meu%20caso%20de%20Aux%C3%ADlio-Acidente." target="_blank" rel="noopener" onclick="trackCTA('cta-final-whatsapp')">
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
-                        QUERO MINHA ANÁLISE SEM COMPROMISSO
+                        QUERO ANALISAR MEU CASO PELO WHATSAPP
                     </a>
-                    <p class="note">Atendimento imediato pelo WhatsApp • Sem compromisso</p>
+                    <p class="note">Análise do caso • Sem compromisso • Atendimento em todo o Brasil</p>
                 </div>
             </div>
-            <p class="cta-disc">Cada caso deve ser analisado individualmente. A análise não representa garantia de concessão do benefício pelo INSS.</p>
-        </div>
-    </section>
-
-    <!-- ===== DOBRA 7 — FAQ ===== -->
-    <section class="block bg-soft">
-        <div class="container">
-            <div class="sec-head">
-                <div class="eyebrow">Perguntas frequentes</div>
-                <h2>Ainda ficou com <span class="hl">alguma dúvida?</span></h2>
-            </div>
-            <div class="faq">
-                <details open>
-                    <summary>Preciso ter carteira assinada para conseguir a Aposentadoria Rural?</summary>
-                    <div class="faq-a">Não necessariamente. O trabalho rural pode ser reconhecido mesmo sem registro em carteira, desde que seja possível comprovar a atividade exercida no campo.</div>
-                </details>
-                <details>
-                    <summary>Qual a idade para pedir a Aposentadoria Rural?</summary>
-                    <div class="faq-a">Em regra, 55 anos para mulheres e 60 anos para homens, além do período mínimo exigido de atividade rural.</div>
-                </details>
-                <details>
-                    <summary>Preciso comprovar 15 anos trabalhando na roça?</summary>
-                    <div class="faq-a">Em regra, é necessário comprovar 180 meses de atividade rural, equivalentes a 15 anos.</div>
-                </details>
-                <details>
-                    <summary>Não tenho documentos de todos os anos. Ainda posso ter direito?</summary>
-                    <div class="faq-a">Pode ser possível. Existem diferentes documentos que podem ajudar a comprovar a atividade rural. Por isso, cada caso precisa ser analisado individualmente.</div>
-                </details>
-                <details>
-                    <summary>Trabalhei com meus pais na roça. Esse período pode contar?</summary>
-                    <div class="faq-a">Dependendo das circunstâncias e das provas disponíveis, períodos de trabalho rural em regime de economia familiar podem ser considerados.</div>
-                </details>
-                <details>
-                    <summary>Trabalhei na roça e depois com carteira assinada na cidade. Perdi meu tempo rural?</summary>
-                    <div class="faq-a">Não necessariamente. É preciso analisar os períodos rurais e urbanos para entender qual modalidade de aposentadoria pode ser mais adequada ao seu caso.</div>
-                </details>
-                <details>
-                    <summary>Posso pedir a aposentadoria sozinho pelo INSS?</summary>
-                    <div class="faq-a">Sim. Porém, erros na documentação ou na comprovação do período rural podem prejudicar a análise do benefício. Uma avaliação prévia ajuda a identificar possíveis problemas antes do pedido.</div>
-                </details>
-                <details>
-                    <summary>Como saber se eu realmente tenho direito?</summary>
-                    <div class="faq-a">A melhor forma é analisar sua idade, o tempo trabalhado no campo, os vínculos que você teve ao longo da vida e os documentos disponíveis.</div>
-                </details>
-            </div>
-            <div class="sec-foot">
-                <a href="https://wa.me/5519995230707?text=Ol%C3%A1!%20Quero%20saber%20se%20tenho%20direito%20%C3%A0%20Aposentadoria%20Rural." target="_blank" rel="noopener" class="btn-cta btn-lg" onclick="trackCTA('faq-rural')">QUERO SABER SE TENHO DIREITO</a>
-            </div>
+            <p class="cta-disc">O reconhecimento do direito depende da análise individual da situação, da documentação e dos requisitos legais aplicáveis. Não há garantia de concessão de benefício.</p>
         </div>
     </section>
 
@@ -745,10 +718,10 @@
         <div class="container">
             <div class="foot-cta">
                 <div>
-                    <h3>Ainda tem dúvidas se você tem direito à Aposentadoria Rural?</h3>
+                    <h3>Ainda tem dúvidas se você pode ter direito ao Auxílio-Acidente?</h3>
                     <p>Fale agora com a nossa equipe e receba a análise do seu caso, sem compromisso.</p>
                 </div>
-                <a class="foot-wa" href="https://wa.me/5519995230707?text=Ol%C3%A1!%20Quero%20saber%20se%20tenho%20direito%20%C3%A0%20Aposentadoria%20Rural." target="_blank" rel="noopener" aria-label="Falar no WhatsApp com a MPA Advogados" onclick="trackCTA('footer-whatsapp')">
+                <a class="foot-wa" href="https://wa.me/5519995230707?text=Ol%C3%A1!%20Quero%20analisar%20meu%20caso%20de%20Aux%C3%ADlio-Acidente." target="_blank" rel="noopener" aria-label="Falar no WhatsApp com a MPA Advogados" onclick="trackCTA('footer-whatsapp')">
                     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
                     Falar no WhatsApp
                 </a>
@@ -770,7 +743,7 @@
                 <div class="foot-areas">
                     <h4>Áreas de Atuação</h4>
                     <ul>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Aposentadoria Rural</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Auxílio-Acidente</li>
                         <li><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Aposentadoria Especial</li>
                         <li><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Salário-Maternidade</li>
                         <li><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> BPC / LOAS</li>
@@ -797,7 +770,7 @@
     </footer>
 
     <!-- Botão flutuante WhatsApp -->
-    <a class="wa-float" href="https://wa.me/5519995230707?text=Ol%C3%A1!%20Quero%20saber%20se%20tenho%20direito%20%C3%A0%20Aposentadoria%20Rural." target="_blank" rel="noopener" aria-label="Falar no WhatsApp com a MPA Advogados" onclick="trackCTA('float-whatsapp')">
+    <a class="wa-float" href="https://wa.me/5519995230707?text=Ol%C3%A1!%20Quero%20analisar%20meu%20caso%20de%20Aux%C3%ADlio-Acidente." target="_blank" rel="noopener" aria-label="Falar no WhatsApp com a MPA Advogados" onclick="trackCTA('float-whatsapp')">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
     </a>
 
@@ -829,8 +802,8 @@
                 }
                 a.addEventListener('click', function () {
                     try {
-                        if (typeof fbq === 'function') { fbq('track', 'Lead', { content_name: 'Aposentadoria Rural' }); }
-                        if (window.dataLayer) { window.dataLayer.push({ event: 'lead_submit', pagina: 'aposentadoria-rural' }); }
+                        if (typeof fbq === 'function') { fbq('track', 'Lead', { content_name: 'Auxílio-Acidente' }); }
+                        if (window.dataLayer) { window.dataLayer.push({ event: 'lead_submit', pagina: 'acidente-de-trabalho' }); }
                     } catch (_) {}
                 });
             });
@@ -838,7 +811,7 @@
 
         document.addEventListener('DOMContentLoaded', function () {
             // page_view automático
-            try { if (window.dataLayer) { window.dataLayer.push({ event:'page_view', page:'aposentadoria-rural' }); } } catch (e) {}
+            try { if (window.dataLayer) { window.dataLayer.push({ event:'page_view', page:'acidente-de-trabalho' }); } } catch (e) {}
 
             // ---- UTM parameters: persiste e injeta na mensagem do WhatsApp ----
             try {
