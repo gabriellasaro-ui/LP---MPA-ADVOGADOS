@@ -216,11 +216,11 @@
 
         /* ===== QUEM PODE ===== */
         .quem-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; max-width:920px; margin:0 auto; }
-        .quem-item { display:flex; align-items:center; justify-content:center; gap:16px; background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:24px 26px; transition:transform .25s ease,box-shadow .25s ease; }
+        .quem-item { display:flex; align-items:flex-start; justify-content:flex-start; gap:16px; background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:24px 26px; transition:transform .25s ease,box-shadow .25s ease; }
         .quem-item:hover { transform:translateY(-3px); box-shadow:var(--shadow); }
         .quem-check { flex-shrink:0; width:36px; height:36px; background:var(--red); border-radius:50%; display:grid; place-items:center; }
         .quem-check svg { width:18px; height:18px; fill:#fff; }
-        .quem-texto { font-size:1rem; line-height:1.5; color:var(--ink-soft); text-align:center; }
+        .quem-texto { flex:1; font-size:1rem; line-height:1.5; color:var(--ink-soft); text-align:left; }
         .quem-texto strong { color:var(--ink); font-weight:700; }
         .quem-item-wide { grid-column:1 / -1; }
         /* fecho de seção (frase de reforço) */

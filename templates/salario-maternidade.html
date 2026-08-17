@@ -215,11 +215,11 @@
 
         /* ===== QUEM PODE ===== */
         .quem-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; max-width:920px; margin:0 auto; }
-        .quem-item { display:flex; align-items:center; justify-content:center; gap:16px; background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:24px 26px; transition:transform .25s ease,box-shadow .25s ease; }
+        .quem-item { display:flex; align-items:flex-start; justify-content:flex-start; gap:16px; background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:24px 26px; transition:transform .25s ease,box-shadow .25s ease; }
         .quem-item:hover { transform:translateY(-3px); box-shadow:var(--shadow); }
         .quem-check { flex-shrink:0; width:36px; height:36px; background:var(--red); border-radius:50%; display:grid; place-items:center; }
         .quem-check svg { width:18px; height:18px; fill:#fff; }
-        .quem-texto { font-size:1rem; line-height:1.5; color:var(--ink-soft); text-align:center; }
+        .quem-texto { flex:1; font-size:1rem; line-height:1.5; color:var(--ink-soft); text-align:left; }
         .quem-texto strong { color:var(--ink); font-weight:700; }
         /* fecho de seção (frase de reforço) */
         .sec-foot { max-width:760px; margin:44px auto 0; text-align:center; }
@@ -285,6 +285,12 @@
         .regiao p { color:var(--ink-soft); font-size:1.02rem; max-width:64ch; margin:0 auto; }
         .cidades { display:flex; flex-wrap:wrap; justify-content:center; gap:9px; margin:26px 0 30px; }
         .cidades span { background:rgba(94,18,16,.06); border:1px solid rgba(94,18,16,.12); color:var(--red); font-weight:600; font-size:.88rem; padding:7px 16px; border-radius:50px; }
+        .regiao.regiao-com-foto { max-width:1080px; padding:0; overflow:hidden; display:grid; grid-template-columns:minmax(300px,.82fr) minmax(0,1.18fr); text-align:left; }
+        .regiao-foto { min-height:100%; background:#eee7e3; }
+        .regiao-foto img { width:100%; height:100%; object-fit:cover; object-position:center 28%; }
+        .regiao-conteudo { padding:46px 44px; display:flex; flex-direction:column; align-items:flex-start; justify-content:center; }
+        .regiao-com-foto p { margin:0; }
+        .regiao-com-foto .cidades { justify-content:flex-start; }
 
         /* ===== FAQ ===== */
         .faq { max-width:840px; margin:0 auto; display:grid; gap:14px; }
@@ -404,6 +410,10 @@
             .stats-grid { grid-template-columns:1fr; }
             .stat { border-right:0; border-bottom:1px solid rgba(255,255,255,.09); }
             .foot-grid { grid-template-columns:1fr 1fr; gap:30px 24px; }
+            .regiao.regiao-com-foto { grid-template-columns:1fr; max-width:640px; }
+            .regiao-foto { min-height:0; aspect-ratio:4 / 3; }
+            .regiao-conteudo { padding:38px 32px; align-items:center; text-align:center; }
+            .regiao-com-foto .cidades { justify-content:center; }
         }
         /* Celular: usa o banner na largura exata (100%) e deixa a cor do painel vinho
            continuar abaixo da imagem, sem emenda. O texto começa logo abaixo da mesa. */
@@ -687,15 +697,20 @@
                 </div>
             </div>
 
-            <div class="regiao">
-                <h3>Atendimento especializado em Direito Previdenciário</h3>
-                <p>A MPA Advogados atua na análise de aposentadorias e benefícios do INSS, ajudando cada cliente a compreender seus direitos e as possibilidades existentes no seu caso.</p>
-                <div class="cidades">
-                    <span>Campinas</span><span>Paulínia</span><span>Cosmópolis</span><span>Valinhos</span>
-                    <span>Vinhedo</span><span>Limeira</span><span>Nova Odessa</span><span>Hortolândia</span>
-                    <span>Sumaré</span><span>e região</span>
+            <div class="regiao regiao-com-foto">
+                <div class="regiao-foto">
+                    <img src="/static/img/800X800.png" alt="Advogada da MPA Advogados" loading="lazy" decoding="async">
                 </div>
-                <a href="https://wa.me/5519995230707?text=Ol%C3%A1!%20Quero%20saber%20se%20posso%20ter%20direito%20ao%20Sal%C3%A1rio-Maternidade." target="_blank" rel="noopener" class="btn-cta btn-lg" onclick="trackCTA('autoridade-maternidade')">FALAR COM A EQUIPE DA MPA</a>
+                <div class="regiao-conteudo">
+                    <h3>Atendimento especializado em Direito Previdenciário</h3>
+                    <p>A MPA Advogados atua na análise de aposentadorias e benefícios do INSS, ajudando cada cliente a compreender seus direitos e as possibilidades existentes no seu caso.</p>
+                    <div class="cidades">
+                        <span>Campinas</span><span>Paulínia</span><span>Cosmópolis</span><span>Valinhos</span>
+                        <span>Vinhedo</span><span>Limeira</span><span>Nova Odessa</span><span>Hortolândia</span>
+                        <span>Sumaré</span><span>e região</span>
+                    </div>
+                    <a href="https://wa.me/5519995230707?text=Ol%C3%A1!%20Quero%20saber%20se%20posso%20ter%20direito%20ao%20Sal%C3%A1rio-Maternidade." target="_blank" rel="noopener" class="btn-cta btn-lg" onclick="trackCTA('autoridade-maternidade')">FALAR COM A EQUIPE DA MPA</a>
+                </div>
             </div>
         </div>
     </section>
